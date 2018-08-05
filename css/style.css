@@ -1,8 +1,7 @@
-@media screen and (max-width: 600px) {
-  #title h1 {
-    font-size: 35px;
-  }
+#nav_language {
+	float: right;
 }
+
 .spanish {
 	display: none;
 }
@@ -12,25 +11,40 @@
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	background: rgba(0, 0, 0, .7);
+	background: rgba(0, 0, 0, 0.7);
 	position: -webkit-sticky; /* Safari */
 	position: sticky;
 	top: 0;
 	z-index: 99999;
-	
+	transition: top 0.3s;
 }
-a {color:white;}      /* unvisited link */
-a:visited {color:white;}  /* visited link */
-a:hover {color:white;}  /* mouse over link */
-a:active {color:white;}  /* selected link */
-li {
-	float: left;
-}
-.fa-home, .fa-th, .fa-comment, .fa-cube, .fa-globe-americas {
+
+a {
+	color: white;
+} /* unvisited link */
+a:visited {
+	color: white;
+} /* visited link */
+a:hover {
+	color: white;
+} /* mouse over link */
+a:active {
+	color: white;
+} /* selected link */
+
+.fa-home,
+.fa-th,
+.fa-comment,
+.fa-cube,
+.fa-globe-americas {
 	margin-right: 8px;
 }
 .fa-codepen {
 	margin-right: 3px;
+}
+
+li {
+	float: left;
 }
 
 li a {
@@ -42,48 +56,52 @@ li a {
 }
 
 li a:hover {
-	background: rgba(0, 0, 100, .6);
+	background: rgba(0, 0, 100, 0.6);
 	text-decoration: none;
 	color: white;
+}
+
+li a:active {
+	background: rgba(0, 0, 150, 0.6);
 }
 
 #main {
 	background: #000;
 }
 
-#welcome-section {
+#home {
 	background: #333;
 	background-image: url("https://www.econcepts.ie/wp-content/uploads/2016/04/bp_background_2_blue1.jpg");
-	height:100vh;
+	height: 100vh;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
 	text-align: center;
 }
 .blur {
-	background: rgba(0,0,0,0.3);
-	height: 100vh;	
+	background: rgba(0, 0, 0, 0.3);
+	height: 100vh;
 }
 
 #title {
 	padding-top: 150px;
 	color: white;
-	font-family: 'Jura', sans-serif;
+	font-family: "Jura", sans-serif;
 	width: 70%;
 	margin: 0 auto;
 }
 h1 {
 	font-size: 50px;
-
 }
 #img-caption {
+	border-radius: 3px;
 	margin-top: -31px;
 	padding-left: 7px;
 	padding-right: 7px;
 	padding-top: 4px;
 	padding-bottom: 7px;
 	height: 27px;
-	color: rgba(0, 0, 0, 0);;
+	color: rgba(0, 0, 0, 0);
 	background: black;
 	width: auto;
 	position: absolute;
@@ -94,26 +112,26 @@ h1 {
 }
 
 #img {
-    width: 100%;
+	width: 100%;
 	margin-top: 12px;
 	margin-bottom: 12px;
 	border-radius: 10px;
 }
 .img-div:hover #img-caption {
-	background: rgba(0, 0, 0, .7);
+	background: rgba(0, 0, 0, 0.7);
 	color: white;
 	margin-top: -39px;
 }
 
 .img-div:hover {
-	transform: scale(1.05);	
+	transform: scale(1.05);
 	-moz-transform: scale(1.05);
-    -webkit-transform: scale(1.05);
+	-webkit-transform: scale(1.05);
 }
-.img-div  {
+.img-div {
 	transition: all 0.3s;
 	-moz-transition: all 0.3s;
-    -webkit-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
 }
 .row {
 	width: 80%;
@@ -142,7 +160,7 @@ h1 {
 }
 
 .wrapper {
-	background: rgba(0, 0, 0, .6);
+	background: rgba(0, 0, 0, 0.6);
 	margin: 0 auto;
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -152,7 +170,6 @@ h1 {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
-	
 }
 #skills {
 	height: auto;
@@ -163,26 +180,26 @@ h1 {
 	background-position: center center;
 	padding-bottom: 10px;
 }
-#english, #spanish {
-	width:80px; 
+#english,
+#spanish {
+	width: 80px;
 	margin-right: 10px;
 }
 
-
-
-.subheader, #project-title {
+.subheader,
+#project-title {
 	margin-top: -19px;
 	margin-bottom: -2px;
 	height: 65px;
-	background: rgba(0,0,0,0.9);
+	background: rgba(0, 0, 0, 0.9);
 	text-align: center;
 	color: white;
-	font-family: 'Jura', sans-serif;
+	font-family: "Jura", sans-serif;
 }
 .skills_info {
 	color: white;
 	text-align: center;
-	font-family: 'Jura', sans-serif;
+	font-family: "Jura", sans-serif;
 }
 .skills_info i {
 	font-size: 70px;
@@ -192,7 +209,39 @@ h1 {
 	margin-bottom: 10px;
 	text-decoration: none;
 }
-a, a:hover {
+a,
+a:hover {
 	color: inherit;
 	text-decoration: none;
+}
+#show,
+#hide {
+	display: none;
+}
+@media screen and (min-width: 0px) and (max-width: 540px) {
+	#show {
+		float: right;
+		display: block;
+	} /* show it on small screens */
+	#hide {
+		float: right;
+	}
+	li {
+		float: none;
+	}
+	li a {
+		text-align: left;
+	}
+	#nav_language {
+		float: none;
+	}
+	#mobile_hide {
+		display: none;
+	}
+}
 
+@media screen and (max-width: 600px) {
+	#title h1 {
+		font-size: 35px;
+	}
+}
